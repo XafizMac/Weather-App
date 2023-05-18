@@ -1,3 +1,13 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+#hidden{
+    display: none;
+}
+
+#temp,
+#city,
+#weatherIcon{
+    display: flex;
+    justify-content: center;
+}
