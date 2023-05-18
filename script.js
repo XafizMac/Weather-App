@@ -5,12 +5,6 @@ const searchInput = document.getElementById('search')
 const searchBtn = document.getElementById('btn')
 const weatherIcon = document.getElementById('weatherIcon')
 
-
-async function current() {
-
-}
-
-
 async function checkWeather(city) {
     const response = await fetch(apiURL + city + `&appid=${apiKey}`)
     var data = await response.json()
