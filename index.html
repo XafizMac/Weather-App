@@ -20,16 +20,21 @@
     <div style="background-image: linear-gradient(135deg, #00feba, #5b548a);"
         class="flex flex-col absolute top-[10%] left-[50%] translate-x-[-50%] h-max w-[360px] bg-white p-6 rounded-2xl">
         <div class="flex justify-between w-full">
-            <input class="text-gray-500 bg-white py-2 px-3 rounded-full border-none outline-none" id="input" type="text"
+            <input class="text-gray-500 bg-white py-2 px-3 rounded-full border-none outline-none" id="search" type="text"
                 placeholder="enter city name" autocomplete="off">
-            <div class="w-[40px] flex justify-center rounded-full h-[40px] self-center bg-white">
-                <img id="search" class="w-[15px] self-center" src="./img/search.png" alt="">
+            <div id="btn" class="cursor-pointer w-[40px] flex justify-center rounded-full h-[40px] self-center bg-white">
+                <img class="w-[15px] self-center" src="./img/search.png" alt="">
             </div>
         </div>
-        <div class="flex flex-col mt-4 self-center m-auto">
-            <img id="status" src="./img/rain.png" class="w-[170px] self-center" alt="">
-            <h1 id="temp" class="text-white self-center text-[45px]">28°C</h1>
-            <h2 id="city" class="text-white self-center text-[30px]">Bishkek</h2>
+        <div id="error" class="hidden text-white translate-x-[5px] translate-y-[7px]">
+            <p class="text-[13px]">Invalid city name</p>
+        </div>
+        <div id="hidden" class="flex flex-col mt-4 self-center">
+            <div class="w-[200px] flex justify-center ml-[20px]">
+                <img id="weatherIcon" src="" class="w-[170px]" alt="">
+            </div>
+            <h1 id="temp" class="text-white self-center text-[45px]"></h1>
+            <h2 id="city" class="text-white self-center text-[30px]"></h2>
 
             <div class="flex justify-between gap-6 w-full mt-4">
                 <div class="flex self-center gap-[3px]">
@@ -37,7 +42,7 @@
                         <img class="h-full" src="./img/humidity.png" alt="">
                     </div>
                     <div class="flex flex-col self-center">
-                        <p class="text-white text-[20px]" id="humidity">50%</p>
+                        <p class="text-white text-[20px]" id="humidity"></p>
                         <p class="text-white text-[13px]">humidity</p>
                     </div>
                 </div>
@@ -46,7 +51,7 @@
                         <img class="h-full" src="./img/wind.png" alt="">
                     </div>
                     <div class="flex flex-col self-center">
-                        <p class="text-white text-[20px]" id="wind">15 km/h</p>
+                        <p class="text-white text-[20px]" id="wind"></p>
                         <p class="text-white text-[13px]">Wind Speed</p>
                     </div>
                 </div>
